@@ -1,0 +1,423 @@
+body {
+    overflow-x: hidden;
+    background: #f8f9f8;
+    color: #3b3b3b;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: inherit;
+    font-weight: 300;
+    line-height: 1.1;
+    color: inherit;
+}
+
+h3,
+.h3 {
+    font-size: 24px;
+}
+
+
+/*header*/
+
+.header-logo {
+    text-align: center;
+}
+
+.header-logo a {
+    text-decoration: none;
+}
+
+.header-logo p {
+    font-size: 29px;
+    font-weight: 800;
+    padding: 20px 0;
+    margin: 0px;
+    color: #3b3b3b;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*banner*/
+
+.banner,
+.problem-box,
+.steps-box {
+    margin: 0;
+}
+
+.banner .banner-left {
+    height: 318.25px;
+    background-image: url(../images/banner1.jpg);
+    background-size: cover;
+}
+
+.banner .banner-right {
+    padding-top: 10px;
+    height: 318.25px;
+    background-image: url(../images/banner2.jpg);
+    background-size: cover;
+}
+
+.name-banner p {
+    margin: 0px;
+    font-size: 105px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    color: white;
+}
+
+.slogan p {
+    font-size: 16px;
+    color: white;
+    font-weight: 300;
+}
+
+.slogan .slg1 {
+    margin-bottom: 0px;
+}
+
+.slogan .slg2 {
+    margin-bottom: 20px;
+}
+
+.btt-banner .button-banner {
+    width: 160px;
+    padding: 10px;
+    border: 1px solid yellow;
+    background: #ff000000;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: none;
+}
+
+
+/*problem*/
+
+.problem,
+.service,
+.step-title,
+.partner {
+    text-align: center;
+    background: #f8f9f8;
+    padding: 25px 0;
+}
+
+.problem-box {
+    height: 275px;
+    background: linear-gradient( 90deg, rgba(231, 158, 42, 1) 0%, rgba(254, 238, 161, 1) 100%);
+}
+
+
+/*problem-box*/
+
+.problem-box .why {
+    height: 100%;
+    width: 80px;
+    background: #9b0000;
+    color: white;
+    float: left;
+}
+
+.why h3 {
+    transform: rotate( 270deg);
+    transform-origin: 0 0;
+    position: absolute;
+    top: 725px;
+    left: 25px;
+    font-weight: bolder;
+}
+
+.list-reason {
+    height: 100%;
+    width: 95%;
+    display: flex;
+    margin-top: -270px;
+    margin-left: 80px;
+    padding: 25px 30px;
+}
+
+.reason {
+    padding: 0 15px;
+    height: 100%;
+}
+
+.content {
+    background: #ffffffeb;
+    height: 100%;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.bi {
+    width: 7px;
+    height: 7px;
+    background: #3b3b3b;
+    border-radius: 50%;
+    margin: auto auto 25px auto;
+}
+
+.content h5 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+
+/*slide*/
+
+.slide-reason {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    margin-top: -270px;
+    margin-left: 80px;
+    padding: 25px 30px;
+}
+
+.slide-item {
+    padding: 0 15px;
+    height: 100%;
+}
+
+.item-content {
+    background: #ffffffeb;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 100px;
+}
+
+.item-content h5 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.slick-prev,
+.slick-next {
+    display: none !important;
+}
+
+
+/*service-box*/
+
+.service-box {
+    background: #f5f6f1;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.service-item {
+    display: flex;
+}
+
+.service-item .service-image {
+    width: 345px;
+}
+
+.service-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.service-content {
+    width: 85%;
+    background-image: url(../images/1-07.jpg);
+    background-size: 100% 250px;
+    object-position: 0px;
+}
+
+.service-content h4 {
+    padding-top: 65px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.service-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+
+/*step*/
+
+strong {
+    font-weight: 700;
+}
+
+.steps-box,
+.steps-box-mobile {
+    color: white;
+    background-image: url(../images/register.png);
+    background-size: contain;
+    padding: 30px 30px;
+    margin-bottom: 30px;
+}
+
+.step {
+    text-align: center;
+    padding: 0 35px;
+}
+
+.step-item {
+    background: #d00000ab;
+    height: 160px;
+    padding: 10px;
+}
+
+.step h4 {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.6;
+    padding-bottom: 10px;
+}
+
+.steps-box-mobile {
+    display: none;
+}
+
+
+/*register*/
+
+.register-box {
+    height: 829px;
+    background-image: url(../images/register_form.jpg);
+    background-size: cover;
+    background-position: 100%;
+    padding: 20px;
+}
+
+.register-text {
+    text-align: center;
+}
+
+.register-text h3 {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.register-text p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.form-register {
+    margin-top: 20px;
+}
+
+.form-rgt {
+    text-align: left;
+}
+
+.form-group {
+    font-size: 13px;
+    font-weight: 800;
+    padding-bottom: 30px;
+}
+
+.numberphone,
+.confirm {
+    display: none;
+}
+
+.form-group .control-label {
+    padding-top: 7px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    color: #555;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%) !important;
+}
+
+textarea.form-control {
+    height: auto;
+}
+
+.register-btt button {
+    position: relative;
+    top: 87px;
+    color: white;
+    background: red;
+    font-weight: 700;
+    padding: 7px 20px;
+    border: 1px solid red;
+    border-radius: 0px;
+}
+
+
+/*partner*/
+
+.partner-slide {
+    margin-left: 21px;
+}
+
+.partner-slide .partner-item {
+    margin-right: 34px;
+}
+
+.partner-slide img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+
+/*footer*/
+
+.footer {
+    background: #191919;
+    color: #efefef;
+    font-weight: 600;
+}
+
+.ft {
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.ft-icon,
+.ft-bottom .ft-bt {
+    margin-bottom: 15px;
+}
+
+.ft-icon i {
+    width: 18px;
+}
+
+.ft-icon a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+.ft-bottom {
+    display: flex;
+    justify-content: space-between;
+}
