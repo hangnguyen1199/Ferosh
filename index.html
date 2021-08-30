@@ -37,7 +37,7 @@
                 <p class="slg2">CHO CÁC THƯƠNG HIỆU THỜI TRANG</p>
             </div>
             <div class="btt-banner">
-                <button class="button-banner">ĐĂNG KÝ NGAY</button>
+                <button class="button-banner"><a href="#rgt">ĐĂNG KÝ NGAY</a></button>
             </div>
         </div>
     </section>
@@ -211,7 +211,7 @@
             </div>
         </div>
     </section>
-    <section class="register">
+    <section id="rgt" class="register">
         <div class="container">
             <div class="register-box text-center col-md-12  container">
                 <div class="register-text col-md-12 row">
@@ -219,62 +219,74 @@
                     <p>Cảm ơn đối tác đã tin tưởng và lựa chọn đồng hành cùng Ferosh! </p>
                     <p>Vui lòng hoàn tất thông tin để tạo tài khoản đăng nhập Trung Tâm Bán Hàng - Ferosh Seller Center.</p>
                 </div>
-                <div class="form-register">
+                <div id="errorText" class="text-center form-register ">
                     <form action="" class="form-rgt container col-md-10">
                         <div class="form-group row">
-                            <label class="control-label col-md-3 col-sm-3" for="hovaten">Họ và tên</label>
+                            <label id="erroName" class="control-label col-md-3 col-sm-3" for="hovaten">Họ và tên</label>
                             <div class="col-md-6 col-sm-9">
-                                <input type="text" class="form-control" id="name" placeholder="Nguyễn Văn A" name="hovaten">
+                                <input type="text" class="form-control" id="name" placeholder="Nguyễn Văn A" name="hovaten" />
+                                <span class="txt-test" id="error_name"></span>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="control-label col-md-3 col-sm-3" for="information">Thông tin liên hệ</label>
                             <div class="col-md-3 col-sm-9">
-                                <input type="text" class="form-control" id="information" placeholder="Email" name="information">
+                                <input type="text" class="form-control" id="mail" placeholder="Email" name="information">
+                                <span class="txt-test" id="error_mail"></span>
                             </div>
                             <label class="control-label col-md-3 col-sm-3 numberphone" for="information">Số điện thoại</label>
                             <div class=" col-md-3 col-sm-9">
-                                <input type="text" class="form-control form-two" id="information" placeholder="0123456789" name="information">
+                                <input type="text" class="form-control form-two" id="phone" placeholder="0123456789" name="information">
+                                <span class="txt-test" id="error_phone"></span>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="control-label col-md-3 col-sm-3" for="name-brand">Tên thương hiệu</label>
+                            <label class="control-label col-md-3 col-sm-3" for="brand">Tên thương hiệu</label>
                             <div class="col-md-6 col-sm-9">
-                                <input type="text" class="form-control" id="name-brand" placeholder="Example" name="name-brand">
+                                <input type="text" class="form-control" id="brand" placeholder="Example" name="brand">
+                                <span class="txt-test" id="error_brand"></span>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="control-label col-sm-3" for="product">Sản phẩm kinh doanh</label>
                             <div class="col-md-6 col-sm-9">
-                                <input type="text" class="form-control" id="product" placeholder="Thời trang" name="product">
+                                <select id="" class="form-control">
+                                    <option name="nameproduct" value="Thời trang">Thời trang</option>
+                                    <option name="nameproduct" value="Mỹ phẩm - TPCN">Mỹ phẩm - TPCN</option>
+                                    <option name="nameproduct" value="Phụ kiệu (giày dép, túi xách, trang sức & các loại phụ kiện khác">Phụ kiệu (giày dép, túi xách, trang sức & các loại phụ kiện khác</option>
+                                  </select>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="control-label col-md-3 col-sm-3" for="product">Link FB/ Instagram/ Website</label>
                             <div class="col-md-6 col-sm-9">
                                 <textarea id="link" class="form-control" name="link" rows="2"></textarea>
+                                <span class="txt-test" id="error_link"></span>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="control-label col-md-3 col-sm-3" for="username">Tài khoản</label>
                             <div class=" col-md-6 col-sm-9">
                                 <input type="text" class="form-control" id="username" placeholder="Tài khoản" name="username">
+                                <span class="txt-test" id="error_username"></span>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="control-label col-md-3 col-sm-3" for="password">Mật khẩu</label>
-                            <div class=" col-md-3 col-sm-9">
-                                <input type="password" class="form-control" id="password" placeholder="Mật khẩu" name="password">
+                            <div class="col-md-3 col-sm-9">
+                                <input type="password" class="form-control" id="pass" placeholder="Mật khẩu" name="password">
+                                <span class="txt-test" id="error_pass"></span>
                             </div>
-                            <label class="control-label col-md-3 col-sm-3 confirm" for="password">Nhập lại mật khẩu</label>
+                            <label class="control-label col-md-3 col-sm-3 confirm" for="pass">Nhập lại mật khẩu</label>
                             <div class=" col-md-3 col-sm-9">
                                 <input type="password" class="form-control form-two ps" id="password" placeholder="Nhập lại mật khẩu" name="password">
+                                <span class="txt-test" id="error_password"></span>
                             </div>
                         </div>
                     </form>
-                </div>
-                <div class="register-btt text-center">
-                    <button>ĐĂNG KÝ NGAY</button>
+                    <div class="register-btt ">
+                        <button type="button" id="submit" value="Submit" data-toggle="modal" data-target="#confirmRegister" class="btn btn-white text-center register-button" onclick="Register();">ĐĂNG KÝ NGAY</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -383,6 +395,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/index.js"></script>
 </body>

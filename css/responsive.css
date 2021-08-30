@@ -1,192 +1,202 @@
-@media screen and (min-width:769px) and (max-width:1920px) {
-    .slide-reason {
-        display: none;
-    }
-}
-
-@media screen and (max-width:1280) {
-    .why h3 {
-        top: 90%;
-    }
-}
-
-@media screen and (max-width:1024) {
-    .register-box {
-        height: 803px;
-        background-position: 100%;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .register-box {
-        height: 803px;
-        background-position: 100%;
-    }
-    .register-btt button {
-        margin-top: 43px;
-    }
-    .slide-reason {
-        display: none;
-    }
-}
-
-@media screen and (min-width:600px) and (min-width:768px) {
-    .register-btt button {
-        margin-top: 40px;
-    }
-    .step {
-        padding: 0 5px;
-    }
-}
-
-@media screen and (min-width:600px) and (max-width:768px) {
-    .register-btt button {
-        margin-top: 0px;
-        top: -13px !important;
-    }
-    .step {
-        padding: 0 5px;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .banner {
-        flex-direction: column;
-    }
-    .step {
-        padding: 0 14px;
-    }
-    .step-item {
-        padding: 0px;
-    }
-    .register-box {
-        background-position: 100%;
-    }
-    .register-btt button {
-        margin-top: 15px;
-    }
-    .why h3 {
-        top: 101%;
-    }
-    .ft-content {
-        text-align: left;
-    }
-    .ft-bottom {
-        flex-direction: column;
-    }
-    .list-reason {
-        display: none;
-    }
-    .slide-reason {
-        display: grid;
-    }
-    .numberphone,
-    .confirm {
-        display: none;
-    }
-}
-
-@media screen and (max-width:600px) {
-    .step {
-        padding: 0 15px;
-    }
-}
-
-@media screen and (min-width:480px) and (max-width:600px) {
-    .why h3 {
-        top: 133%;
-    }
-    .register-btt button {
-        margin-top: 0;
-        top: 10px;
-    }
-    .numberphone,
-    .confirm {
-        display: flex;
-    }
-    .ps {
-        margin-top: 10px;
-    }
-}
-
-@media (min-width: 320px) and (max-width:480px) {
-    .banner .banner-left {
-        display: none;
-    }
-    .banner .banner-right {
-        height: 263.25px;
-    }
-    .name-banner p {
-        font-size: 75px;
-    }
-    .service-item {
-        flex-direction: column;
-    }
-    .service-image {
-        width: 398px;
-    }
-    .service-content {
-        width: 100%;
-    }
-    .slide-reason {
-        display: none;
-    }
-    .list-reason {
-        display: flex;
-        flex-direction: column;
-        margin-left: 10px;
-        margin-top: 10px;
-        padding: 24px 0px;
-    }
-    .content-text {
-        padding-bottom: 15px;
-    }
-    .why {
-        display: none;
-    }
-    .problem-box {
-        height: 100%;
-    }
-    .form-group {
-        padding-bottom: 0px;
-    }
-    .register-btt button {
-        margin-top: 0;
-        top: 35px;
-    }
-    .item-text {
-        order: 2;
-    }
-    .service-content {
-        height: 190px;
-        background-size: 100% 100%;
-    }
-    .service-content h4 {
-        padding-top: 35px;
-    }
-    .service-image img {
-        width: 100% !important;
-    }
-    .service-item .service-image {
-        width: 100%;
-    }
-    .form-two {
-        margin-top: 10px;
-    }
-    .steps-box {
-        display: none;
-    }
-    .steps-box-mobile {
-        display: grid;
-    }
-    .step-item {
-        height: 102px;
-        margin-top: 18px;
-    }
-    .step-item h4 {
-        padding-bottom: 0;
-    }
-    .ft-content {
-        text-align: center;
-    }
-}
+ @media screen and (min-width:769px) and (max-width:1920px) {
+     .slide-reason {
+         display: none;
+     }
+ }
+ 
+ @media screen and (max-width:1280) {
+     .why h3 {
+         top: 90%;
+     }
+ }
+ 
+ @media screen and (max-width:1024) {
+     .register-box {
+         height: 803px;
+         background-position: 100%;
+     }
+ }
+ 
+ @media screen and (min-width: 992px) {
+     .register-box {
+         height: 803px;
+         background-position: 100%;
+     }
+     .register-button {
+         margin-top: 43px;
+     }
+     .slide-reason {
+         display: none;
+     }
+ }
+ 
+ @media screen and (min-width:600px) and (min-width:768px) {
+     .register-button {
+         margin-top: 40px;
+     }
+     .step {
+         padding: 0 5px;
+     }
+ }
+ 
+ @media screen and (min-width:600px) and (max-width:768px) {
+     .register-btt {
+         margin-top: 0px;
+     }
+     .step {
+         padding: 0 5px;
+     }
+ }
+ 
+ @media screen and (max-width:768px) {
+     .banner {
+         flex-direction: column;
+     }
+     .step {
+         padding: 0 14px;
+     }
+     .step-item {
+         padding: 0px;
+     }
+     .register-box {
+         background-position: 100%;
+     }
+     .register-button {
+         margin-top: 10px;
+     }
+     .why h3 {
+         top: 101%;
+     }
+     .ft-content {
+         text-align: left;
+     }
+     .ft-bottom {
+         flex-direction: column;
+     }
+     .list-reason {
+         display: none;
+     }
+     .slide-reason {
+         display: grid;
+     }
+     .numberphone,
+     .confirm {
+         display: none;
+     }
+ }
+ 
+ @media screen and (max-width:600px) {
+     .step {
+         padding: 0 15px;
+     }
+ }
+ 
+ @media screen and (min-width:480px) and (max-width:600px) {
+     .why h3 {
+         top: 133%;
+     }
+     .register-button {
+         margin-top: 0;
+         top: 10px;
+         margin-left: 15px;
+     }
+     .numberphone,
+     .confirm {
+         display: flex;
+     }
+     .ps {
+         margin-top: 10px;
+     }
+ }
+ 
+ @media (min-width: 320px) and (max-width:480px) {
+     .banner .banner-left {
+         display: none;
+     }
+     .banner .banner-right {
+         height: 263.25px;
+     }
+     .name-banner p {
+         font-size: 75px;
+     }
+     .service-item {
+         flex-direction: column;
+     }
+     .service-image {
+         width: 398px;
+     }
+     .service-content {
+         width: 100%;
+     }
+     .slide-reason {
+         display: none;
+     }
+     .list-reason {
+         display: flex;
+         flex-direction: column;
+         margin-left: 10px;
+         margin-top: 10px;
+         padding: 24px 0px;
+     }
+     .content-text {
+         padding-bottom: 15px;
+     }
+     .why {
+         display: none;
+     }
+     .problem-box {
+         height: 100%;
+     }
+     .form-group {
+         padding-bottom: 0px;
+     }
+     .register-box {
+         background-position: 61% !important;
+     }
+     .register-button {
+         margin-top: -35px;
+         margin-left: 35px;
+     }
+     .item-text {
+         order: 2;
+     }
+     .service-content {
+         height: 190px;
+         background-size: 100% 100%;
+     }
+     .service-content h4 {
+         padding-top: 35px;
+     }
+     .service-image img {
+         width: 100% !important;
+     }
+     .service-item .service-image {
+         width: 100%;
+     }
+     .form-two {
+         margin-top: 10px;
+     }
+     .steps-box {
+         display: none;
+     }
+     .steps-box-mobile {
+         display: grid;
+     }
+     .step-item {
+         height: 102px;
+         margin-top: 18px;
+     }
+     .step-item h4 {
+         padding-bottom: 0;
+     }
+     .register-text p {
+         display: none;
+     }
+     .form-register {
+         margin-top: -20px;
+     }
+     .register-btt {
+         margin-top: 93px;
+         margin-left: -13%;
+     }
+ }
