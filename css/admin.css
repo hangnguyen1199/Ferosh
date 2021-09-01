@@ -1,0 +1,16 @@
+.form-contact {
+    padding: 0px;
+}
+
+.form-item {
+    display: flex;
+    padding: 8px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.form-item p {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}

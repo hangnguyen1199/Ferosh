@@ -1,51 +1,3 @@
-$(document).ready(function() {
-    $('.slide-reason').slick({
-        autoplay: true,
-        autoplaySpeed: 2000,
-    });
-});
-$(document).ready(function() {
-    $('.partner-slide').slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        responsive: [{
-            breakpoint: 1025,
-            settings: {
-                slidesToShow: 5,
-                autoplay: true,
-                autoplaySpeed: 2000,
-            }
-        }, {
-            breakpoint: 769,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: 2000,
-            }
-        }, {
-            breakpoint: 481,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: 2000,
-            }
-        }, ]
-    });
-
-});
-/*loadingpage*/
-var loader = document.getElementById("preloader");
-loader.style.display = 'flex'
-setTimeout(function() {
-    loader.style.display = 'none'
-}, 3000)
-
 /*register*/
 function checkName() {
     var name = document.getElementById('name').value;
@@ -148,82 +100,36 @@ function checkPassword() {
         errorConPass.innerHTML = " ";
     }
 }
+LoadListCustomers();
 
+function LoadListCustomers() {
+    var customers = JSON.parse(localStorage.getItem('Customers'))
 
-var formElement = document.querySelectorAll('.form-group input,textarea,select')
-var arr = [];
-var arrNew = JSON.parse(localStorage.getItem('IDCustomer'))
-if (arrNew == null) {
-    localStorage.setItem('IDCustomer', JSON.stringify([1]))
-}
-arr = JSON.parse(localStorage.getItem('IDCustomer'))
-
-function FormValidate() {
-    arr = JSON.parse(localStorage.getItem('Customers'))
-
-    var fullname = formElement[0].value
-    var gmail = formElement[1].value
-    var phone = formElement[2].value
-    var brand = formElement[3].value
-    var link = formElement[5].value
-    var username = formElement[6].value
-    var pass = formElement[7].value
-    var password = formElement[8].value
-    var registerInfo = {}
-    if (arr == null) {
-        arr = [];
-        registerInfo = {
-            Id: 1,
-            name: fullname,
-            mail: gmail,
-            phone: phone,
-            brand: brand,
-            link: link,
-            username: username,
-            pass: pass,
-            password: password,
-        }
-    } else {
-        registerInfo = {
-            Id: arr[arr.length - 1].Id + 1,
-            name: fullname,
-            mail: gmail,
-            phone: phone,
-            brand: brand,
-            link: link,
-            username: username,
-            pass: pass,
-            password: password,
-        }
-    }
-    var loading = document.querySelector('.submit-loading')
-    loading.style.display = 'flex'
-    setTimeout(function() {
-        loading.style.display = 'none'
-    }, 3000)
-    if (!checkGmail(gmail)) {
-        var success = document.querySelector('.success')
-        success.style.display = 'flex'
-        setTimeout(function() {
-            success.style.display = 'none'
-        }, 5000)
-        arr.push(registerInfo)
-        localStorage.setItem('Customers', JSON.stringify(arr))
-    } else {
-        var failure = document.querySelector('.failure')
-        failure.style.display = 'flex'
-        setTimeout(function() {
-            failure.style.display = 'none'
-        }, 3000)
-        return false;
-    }
+    var html = '';
+    customers.forEach(element => {
+        html += "<tr><td>" + element.Id + "</td><td>" + element.name + "</td><td>" + element.mail + "</td>";
+        html += "<td>" + element.phone + "</td><td>" + element.brand + "</td><td>" + element.product + "</td>";
+        html += "<td><button onclick='eDit(this)' type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#myModal'>Sửa</button><button onclick='Delete(this)'  class='btn btn-danger delete' >Xóa</button></td></tr>";
+    });
+    document.getElementById("dataList").innerHTML = html;
 }
 
-function checkGmail(gmail) {
-    for (let item = 0; item < arr.length; item++) {
-        if (arr[item].mail == gmail) {
-            return true;
+function eDit(index) {
+    var customer1 = customers[index];
+    document.getElementById('name').value = customer1.name
+    document.getElementById('mail').value = customer1.mail
+    document.getElementById('phone').value = customer1.phone
+    document.getElementById('brand').value = customer1.product
+
+}
+
+function Delete(item) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].mail == item.name) {
+            customers.splice(i, 1);
+            break;
         }
+        localStorage.setItem('Customers', JSON.stringify(arr));
+        location.reload();
     }
-    return false;
 }
