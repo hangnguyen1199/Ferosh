@@ -1,5 +1,5 @@
 body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     background: #f8f9f8;
     color: #3b3b3b;
     font-size: 13px;
@@ -31,6 +31,10 @@ h3,
 
 
 /*header*/
+
+.header {
+    overflow-x: hidden;
+}
 
 .header-logo {
     text-align: center;
@@ -548,11 +552,12 @@ textarea.form-control {
 
 .modal-title {
     margin: 0;
+    margin-left: 110px !important;
     font-size: 30px;
     font-weight: 700;
 }
 
-.form-register form {
+.modal-body .form-register form {
     width: 125%;
 }
 

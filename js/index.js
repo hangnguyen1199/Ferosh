@@ -62,7 +62,7 @@ function checkName() {
 
 function checkMail() {
     var mail = document.getElementById('mail').value;
-    var regexMail = /^[A-Za-z0-9_.]{6,32}@([a-zA-Z0-9]{2,12})(.[a-zA-Z]{2,12})+$/;
+    var regexMail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var errorMail = document.getElementById('error_mail')
 
     if (mail == '' || mail == null) {
@@ -76,7 +76,7 @@ function checkMail() {
 
 function checkPhone() {
     var phone = document.getElementById('phone').value;
-    var regexPhone = /^\+?\d{1,3}?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/;
+    var regexPhone = /^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/;
     var errorPhone = document.getElementById('error_phone')
     if (phone == '' || phone == null) {
         errorPhone.innerHTML = " Vui lòng nhập số điện thoại"
@@ -130,7 +130,7 @@ function checkPass() {
     if (pw == '' || pw == null) {
         errorPass.innerHTML = " Vui lòng nhập mật khẩu"
     } else if (!regexPass.test(pw)) {
-        errorPass.innerHTML = "Mật khẩu không hợp lệ!"
+        errorPass.innerHTML = "Tối thiểu tám ký tự, ít nhất một chữ cái và một số"
     } else {
         errorPass.innerHTML = " ";
     }
