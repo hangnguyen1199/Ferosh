@@ -57,87 +57,101 @@
             <div class="modal-dialog">
                 <!-- Modal content-->
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Sửa thông tin</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div id="errorText" class="text-center form-register ">
-                            <form action="" class="form-rgt container col-md-10" onsubmit="return FormValidate();">
+                    <form action="" class="form-rgt container col-md-10" onsubmit="return FormEdit();" id="formEdit">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Sửa thông tin</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="errorText" class="text-center form-register ">
+
                                 <div class="form-group row">
                                     <label id="erroName" class="control-label col-md-3 col-sm-3" for="hovaten">Họ và tên</label>
                                     <div class="col-md-6 col-sm-9">
-                                        <input type="text" class="form-control" id="name" placeholder="Nguyễn Văn A" name="hovaten" onblur="checkName(this);" required />
+                                        <input type="text" class="form-control" id="name" placeholder="Nguyễn Văn A" name="hovaten" />
                                         <span class="txt-test" id="error_name"></span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="control-label col-md-3 col-sm-3" for="information">Thông tin liên hệ</label>
                                     <div class="col-md-3 col-sm-9">
-                                        <input type="text" class="form-control" id="mail" placeholder="Email" name="information" onblur="checkMail(this);" required>
+                                        <input type="text" class="form-control" id="mail" placeholder="Email" name="email">
                                         <span class="txt-test" id="error_mail"></span>
                                     </div>
                                     <label class="control-label col-md-3 col-sm-3 numberphone" for="information">Số điện thoại</label>
                                     <div class=" col-md-3 col-sm-9">
-                                        <input type="text" class="form-control form-two" id="phone" placeholder="0123456789" name="information" onblur="checkPhone(this);" required>
+                                        <input type="text" class="form-control form-two" id="phone" placeholder="0123456789" name="phone">
                                         <span class="txt-test" id="error_phone"></span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="control-label col-md-3 col-sm-3" for="brand">Tên thương hiệu</label>
                                     <div class="col-md-6 col-sm-9">
-                                        <input type="text" class="form-control" id="brand" placeholder="Example" name="brand" onblur=" checkBrand(this)" required>
+                                        <input type="text" class="form-control" id="brand" placeholder="Example" name="brand">
                                         <span class="txt-test" id="error_brand"></span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="control-label col-sm-3" for="product">Sản phẩm kinh doanh</label>
                                     <div class="col-md-6 col-sm-9">
-                                        <select id="product" class="form-control" required>
-                                <option name="nameproduct" value="Thời trang">Thời trang</option>
-                                <option name="nameproduct" value="Mỹ phẩm - TPCN">Mỹ phẩm - TPCN</option>
-                                <option name="nameproduct" value="Phụ kiệu (giày dép, túi xách, trang sức & các loại phụ kiện khác">Phụ kiệu (giày dép, túi xách, trang sức & các loại phụ kiện khác</option>
+                                        <select id="product" class="form-control" name="nameproduct">
+                                <option value="Thời trang">Thời trang</option>
+                                <option value="Mỹ phẩm - TPCN">Mỹ phẩm - TPCN</option>
+                                <option value="Phụ kiệu (giày dép, túi xách, trang sức & các loại phụ kiện khác">Phụ kiệu (giày dép, túi xách, trang sức & các loại phụ kiện khác</option>
                               </select>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="control-label col-md-3 col-sm-3" for="product">Link FB/ Instagram/ Website</label>
                                     <div class="col-md-6 col-sm-9">
-                                        <textarea id="link" class="form-control" name="link" rows="3" onblur="checkLink(this);" required></textarea>
+                                        <textarea id="link" class="form-control" name="link" rows="3" required></textarea>
                                         <span class="txt-test" id="error_link"></span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="control-label col-md-3 col-sm-3" for="username">Tài khoản</label>
                                     <div class=" col-md-6 col-sm-9">
-                                        <input type="text" class="form-control" id="username" placeholder="Tài khoản" name="username" onblur="checkUse(this);" required>
+                                        <input type="text" class="form-control" id="username" placeholder="Tài khoản" name="username">
                                         <span class="txt-test" id="error_username"></span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="control-label col-md-3 col-sm-3" for="password">Mật khẩu</label>
                                     <div class="col-md-3 col-sm-9">
-                                        <input type="password" class="form-control" id="pass" placeholder="Mật khẩu" name="password" onblur="checkPass(this);" required>
+                                        <input type="password" class="form-control" id="pass" placeholder="Mật khẩu" name="pass">
                                         <span class="txt-test" id="error_pass"></span>
                                     </div>
                                     <label class="control-label col-md-3 col-sm-3 confirm" for="pass">Nhập lại mật khẩu</label>
                                     <div class=" col-md-3 col-sm-9">
-                                        <input type="password" class="form-control form-two ps" id="password" placeholder="Nhập lại mật khẩu" name="password" onblur="checkPassword(this);" required>
+                                        <input type="password" class="form-control form-two ps" id="password" placeholder="Nhập lại mật khẩu" name="password">
                                         <span class="txt-test" id="error_password"></span>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="saveData()">Lưu</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Xóa</button>
-                    </div>
-                </div>
+                                <div class="form-group row" id="idEdit">
+                                </div>
 
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" style="z-index: 100000;">Lưu</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Xóa</button>
+                        </div>
+
+                    </form>
+                </div>
             </div>
         </div>
 
+    </div>
+    <div class="success">
+        <div class="success-box">
+            <p>Sửa đăng ký thành công <i class="fas fa-check-circle"></i></p>
+        </div>
+    </div>
+    <div class="failure">
+        <div class="failure-box">
+            <p>Sửa đăng ký không thành công do mail đã được đăng ký!<i class="fas fa-check-circle"></i></p>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

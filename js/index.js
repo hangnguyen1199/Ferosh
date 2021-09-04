@@ -159,8 +159,8 @@ if (arrNew == null) {
 arr = JSON.parse(localStorage.getItem('IDCustomer'))
 
 function FormValidate() {
+    if (localStorage.getItem('Customers') == "undefined") localStorage.removeItem("Customers");
     arr = JSON.parse(localStorage.getItem('Customers'))
-
     var fullname = formElement[0].value
     var gmail = formElement[1].value
     var phone = formElement[2].value
@@ -170,6 +170,7 @@ function FormValidate() {
     var pass = formElement[7].value
     var password = formElement[8].value
     var registerInfo = {}
+
     if (arr == null) {
         arr = [];
         registerInfo = {
@@ -208,7 +209,9 @@ function FormValidate() {
             success.style.display = 'none'
         }, 5000)
         arr.push(registerInfo)
+
         localStorage.setItem('Customers', JSON.stringify(arr))
+        return false;
     } else {
         var failure = document.querySelector('.failure')
         failure.style.display = 'flex'
