@@ -565,6 +565,26 @@ textarea.form-control {
     margin-bottom: -80px;
 }
 
+.modal-content {
+    height: 95vh;
+}
+
+.modal-body .form-register .form-group {
+    text-align: left;
+    margin-bottom: 0px;
+    width: 151%;
+    margin-left: -40px;
+}
+
+.modal-body .form-register {
+    margin-top: 20px;
+    width: 55vh;
+}
+
+.modal-footer {
+    margin-top: 51px;
+}
+
 th {
     text-align: center;
 }
@@ -577,7 +597,6 @@ th {
 .delete {
     font-size: 14px;
     margin-left: 20px;
-    margin-right: -45px;
 }
 
 

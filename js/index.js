@@ -165,6 +165,7 @@ function FormValidate() {
     var gmail = formElement[1].value
     var phone = formElement[2].value
     var brand = formElement[3].value
+    var product = formElement[4].value
     var link = formElement[5].value
     var username = formElement[6].value
     var pass = formElement[7].value
@@ -179,6 +180,7 @@ function FormValidate() {
             mail: gmail,
             phone: phone,
             brand: brand,
+            product: product,
             link: link,
             username: username,
             pass: pass,
@@ -191,6 +193,7 @@ function FormValidate() {
             mail: gmail,
             phone: phone,
             brand: brand,
+            product: product,
             link: link,
             username: username,
             pass: pass,
